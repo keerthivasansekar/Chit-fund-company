@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST")
     if(!empty($user) && !empty($pass))
     {
       $pass_hash = md5($pass);
-      $query = "SELECT user_id, user_level FROM user_master WHERE user_name='$user' AND user_password='$pass_hash'" ;
+      $query = "SELECT user_id, user_level FROM user_master WHERE user_id='$user' AND user_password='$pass_hash'" ;
 
       if($query_run = mysql_query($query))
       {
